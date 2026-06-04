@@ -87,7 +87,25 @@
   "telephone": "+61 4XX XXX XXX",
   "priceRange": "$$",
   "description": "Roofing, decking, patio and outdoor construction specialists serving Perth, Western Australia.",
-  "areaServed": { "@type": "City", "name": "Perth" },
+  "areaServed": [
+    { "@type": "City", "name": "Perth" },
+    { "@type": "City", "name": "Scarborough" },
+    { "@type": "City", "name": "Hillarys" },
+    { "@type": "City", "name": "Joondalup" },
+    { "@type": "City", "name": "Karrinyup" },
+    { "@type": "City", "name": "Stirling" },
+    { "@type": "City", "name": "Wembley" },
+    { "@type": "City", "name": "Floreat" },
+    { "@type": "City", "name": "Subiaco" },
+    { "@type": "City", "name": "Mount Lawley" },
+    { "@type": "City", "name": "Fremantle" },
+    { "@type": "City", "name": "Cottesloe" },
+    { "@type": "City", "name": "Duncraig" },
+    { "@type": "City", "name": "Canning Vale" },
+    { "@type": "City", "name": "Rockingham" },
+    { "@type": "City", "name": "Midland" },
+    { "@type": "City", "name": "Kalamunda" }
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Perth",
@@ -122,7 +140,7 @@
 
     <nav class="hidden lg:flex items-center gap-9 font-head text-sm uppercase tracking-widest text-warm/90">
       <a href="#services" class="nav-link">Services</a>
-      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#areas" class="nav-link">Service Area</a>
       <a href="#why" class="nav-link">Why JMA</a>
       <a href="#process" class="nav-link">Process</a>
       <a href="#faq" class="nav-link">FAQ</a>
@@ -141,7 +159,7 @@
   <div id="drawer" class="lg:hidden hidden bg-charcoal border-t border-white/10">
     <div class="flex flex-col px-6 py-5 gap-4 font-head uppercase tracking-widest text-warm">
       <a href="#services" class="py-1">Services</a>
-      <a href="#projects" class="py-1">Projects</a>
+      <a href="#areas" class="py-1">Service Area</a>
       <a href="#why" class="py-1">Why JMA</a>
       <a href="#process" class="py-1">Process</a>
       <a href="#faq" class="py-1">FAQ</a>
@@ -171,8 +189,8 @@
       <a href="#quote" class="inline-flex justify-center items-center bg-orange hover:bg-orange-bright text-charcoal font-head uppercase tracking-widest text-base px-8 py-4 cut-corner transition-colors">
         Get A Free Quote
       </a>
-      <a href="#projects" class="inline-flex justify-center items-center border border-warm/40 hover:border-orange hover:text-orange text-warm font-head uppercase tracking-widest text-base px-8 py-4 transition-colors">
-        View Projects
+      <a href="#services" class="inline-flex justify-center items-center border border-warm/40 hover:border-orange hover:text-orange text-warm font-head uppercase tracking-widest text-base px-8 py-4 transition-colors">
+        Our Services
       </a>
     </div>
 
@@ -218,7 +236,7 @@
       <!-- Card -->
       <article class="project-card group bg-charcoal text-warm overflow-hidden reveal">
         <div class="relative h-52 overflow-hidden">
-          <img src="https://picsum.photos/seed/composite/800/600?grayscale" alt="Composite decking installation Perth" class="project-img w-full h-full object-cover opacity-80" />
+          <img src="images/services/composite.jpg" alt="Composite decking installation Perth" class="project-img w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent"></div>
         </div>
         <div class="p-7">
@@ -229,7 +247,7 @@
 
       <article class="project-card group bg-charcoal text-warm overflow-hidden reveal">
         <div class="relative h-52 overflow-hidden">
-          <img src="https://picsum.photos/seed/timber/800/600?grayscale" alt="Timber decking builder Perth" class="project-img w-full h-full object-cover opacity-80" />
+          <img src="images/services/timber.jpg" alt="Timber decking builder Perth" class="project-img w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent"></div>
         </div>
         <div class="p-7">
@@ -240,7 +258,7 @@
 
       <article class="project-card group bg-charcoal text-warm overflow-hidden reveal">
         <div class="relative h-52 overflow-hidden">
-          <img src="https://picsum.photos/seed/patio/800/600?grayscale" alt="Patio builder Perth" class="project-img w-full h-full object-cover opacity-80" />
+          <img src="images/services/patio.jpg" alt="Patio builder Perth" class="project-img w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent"></div>
         </div>
         <div class="p-7">
@@ -262,7 +280,7 @@
 
       <article class="project-card group bg-charcoal text-warm overflow-hidden reveal">
         <div class="relative h-52 overflow-hidden">
-          <img src="https://picsum.photos/seed/roofing/800/600?grayscale" alt="Roofing contractor Perth" class="project-img w-full h-full object-cover opacity-80" />
+          <img src="images/services/roofing.jpg" alt="Roofing contractor Perth" class="project-img w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent"></div>
         </div>
         <div class="p-7">
@@ -338,66 +356,53 @@
   </div>
 </section>
 
-<!-- ====================== PROJECT SHOWCASE ====================== -->
-<section id="projects" class="bg-warm py-24 sm:py-32">
+<!-- ====================== SERVICE AREA ====================== -->
+<section id="areas" class="bg-warm py-24 sm:py-32">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
-    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 reveal">
-      <div class="max-w-2xl">
-        <p class="font-head uppercase tracking-[0.3em] text-orange text-sm mb-4">Recent Work</p>
-        <h2 class="font-display text-charcoal text-5xl sm:text-6xl md:text-7xl leading-[0.95]">See the difference for yourself</h2>
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Copy + suburb grid -->
+      <div class="reveal">
+        <p class="font-head uppercase tracking-[0.3em] text-orange text-sm mb-4">Where We Work</p>
+        <h2 class="font-display text-charcoal text-5xl sm:text-6xl md:text-7xl leading-[0.95]">Covering Perth, coast to hills</h2>
+        <p class="mt-6 text-steel text-lg leading-relaxed max-w-xl">We work right across the Perth metro area, from the northern beaches down to the southern suburbs and out to the foothills. One local crew, on the road every day, building decks, patios and roofs close to home.</p>
+
+        <div class="mt-8 flex flex-wrap gap-2.5">
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Scarborough</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Hillarys</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Joondalup</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Karrinyup</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Stirling</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Wembley</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Floreat</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Subiaco</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Mount Lawley</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Fremantle</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Cottesloe</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Duncraig</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Canning Vale</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Rockingham</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Midland</span>
+          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Kalamunda</span>
+          <span class="inline-flex items-center text-steel font-head uppercase tracking-widest text-xs px-2 py-2">+ everywhere between</span>
+        </div>
+
+        <p class="mt-9 text-charcoal font-head uppercase tracking-wide text-sm">Not sure if we reach your suburb?</p>
+        <a href="#quote" class="mt-3 inline-flex items-center bg-orange hover:bg-orange-bright text-charcoal font-head uppercase tracking-widest px-7 py-4 cut-corner transition-colors">Ask Us, It's Free</a>
       </div>
-      <p class="text-steel text-lg max-w-sm">Real Perth backyards, transformed. Swap these tiles for your own before-and-after project photography.</p>
-    </div>
 
-    <!-- Editorial grid: replace each picsum seed with a real JMA project photo -->
-    <div class="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-4 auto-rows-[260px]">
-      <figure class="project-card relative overflow-hidden lg:col-span-7 lg:row-span-2 reveal">
-        <img src="https://picsum.photos/seed/proj1/1200/1000?grayscale" alt="Composite deck and alfresco transformation in Scarborough Perth" class="project-img w-full h-full object-cover" />
-        <figcaption class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-charcoal/90 to-transparent">
-          <span class="font-head uppercase tracking-widest text-orange text-xs">Composite Deck &amp; Alfresco</span>
-          <p class="font-display text-warm text-2xl">Scarborough</p>
-        </figcaption>
-      </figure>
+      <!-- Map -->
+      <div class="reveal">
+        <div class="relative cut-corner overflow-hidden border border-charcoal/10 shadow-xl">
+          <iframe
+            title="JMA Carpentry and Construction service area across Perth, Western Australia"
+            src="https://www.google.com/maps?q=Perth,Western+Australia&amp;z=10&amp;output=embed"
+            class="w-full h-[420px] sm:h-[520px] grayscale-[0.55] contrast-[1.05]"
+            style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p class="mt-3 font-head uppercase tracking-widest text-steel/70 text-xs text-center">Servicing the greater Perth metropolitan area</p>
+      </div>
 
-      <figure class="project-card relative overflow-hidden lg:col-span-5 reveal">
-        <img src="https://picsum.photos/seed/proj2/900/700?grayscale" alt="Colorbond re-roof project in Mount Lawley Perth" class="project-img w-full h-full object-cover" />
-        <figcaption class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-charcoal/90 to-transparent">
-          <span class="font-head uppercase tracking-widest text-orange text-xs">Colorbond Re-Roof</span>
-          <p class="font-display text-warm text-2xl">Mount Lawley</p>
-        </figcaption>
-      </figure>
-
-      <figure class="project-card relative overflow-hidden lg:col-span-5 reveal">
-        <img src="https://picsum.photos/seed/proj3/900/700?grayscale" alt="Patio and pergola build in Duncraig Perth" class="project-img w-full h-full object-cover" />
-        <figcaption class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-charcoal/90 to-transparent">
-          <span class="font-head uppercase tracking-widest text-orange text-xs">Patio &amp; Pergola</span>
-          <p class="font-display text-warm text-2xl">Duncraig</p>
-        </figcaption>
-      </figure>
-
-      <figure class="project-card relative overflow-hidden lg:col-span-4 reveal">
-        <img src="https://picsum.photos/seed/proj4/800/700?grayscale" alt="Timber deck build in Wembley Perth" class="project-img w-full h-full object-cover" />
-        <figcaption class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-charcoal/90 to-transparent">
-          <span class="font-head uppercase tracking-widest text-orange text-xs">Timber Deck</span>
-          <p class="font-display text-warm text-2xl">Wembley</p>
-        </figcaption>
-      </figure>
-
-      <figure class="project-card relative overflow-hidden lg:col-span-4 reveal">
-        <img src="https://picsum.photos/seed/proj5/800/700?grayscale" alt="Backyard gazebo build in Hillarys Perth" class="project-img w-full h-full object-cover" />
-        <figcaption class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-charcoal/90 to-transparent">
-          <span class="font-head uppercase tracking-widest text-orange text-xs">Gazebo &amp; Decking</span>
-          <p class="font-display text-warm text-2xl">Hillarys</p>
-        </figcaption>
-      </figure>
-
-      <figure class="project-card relative overflow-hidden lg:col-span-4 reveal">
-        <img src="https://picsum.photos/seed/proj6/800/700?grayscale" alt="Outdoor living renovation in Floreat Perth" class="project-img w-full h-full object-cover" />
-        <figcaption class="absolute bottom-0 inset-x-0 p-6 bg-gradient-to-t from-charcoal/90 to-transparent">
-          <span class="font-head uppercase tracking-widest text-orange text-xs">Outdoor Living</span>
-          <p class="font-display text-warm text-2xl">Floreat</p>
-        </figcaption>
-      </figure>
     </div>
   </div>
 </section>
