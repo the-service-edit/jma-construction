@@ -75,25 +75,6 @@
 
   .cut-corner { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%); }
 
-  /* Interactive Perth map */
-  .jma-map { background:#161616; }
-  .jma-map svg { display:block; width:100%; height:auto; }
-  .jma-cover { animation: jmaCover 6s ease-in-out infinite; transform-box:view-box; transform-origin:center; }
-  @keyframes jmaCover { 0%,100%{opacity:.85} 50%{opacity:1} }
-  .jma-cbd-lbl { fill:#F7F4EF; font:600 12px 'Oswald',sans-serif; text-transform:uppercase; letter-spacing:.05em; }
-  .jma-cbd-pulse { transform-box:fill-box; transform-origin:center; animation: jmaPulse 2.6s ease-out infinite; }
-  @keyframes jmaPulse { 0%{transform:scale(1);opacity:.6} 80%,100%{transform:scale(3);opacity:0} }
-  .jma-pin { cursor:pointer; opacity:0; animation: jmaFade .5s ease forwards; outline:none; }
-  @keyframes jmaFade { to { opacity:1 } }
-  .jma-dot { fill:#D86512; transition: transform .2s ease, fill .2s ease; transform-box:fill-box; transform-origin:center; }
-  .jma-ring { fill:none; stroke:#F07B22; stroke-width:1.4; opacity:0; transition: transform .3s ease, opacity .3s ease; transform-box:fill-box; transform-origin:center; }
-  .jma-lbl { fill:#F7F4EF; font:600 12px 'Oswald',sans-serif; text-transform:uppercase; letter-spacing:.04em; opacity:0; transition:opacity .2s ease; pointer-events:none; }
-  .jma-pin:hover .jma-dot, .jma-pin:focus-visible .jma-dot { transform:scale(1.9); fill:#F07B22; }
-  .jma-pin:hover .jma-ring, .jma-pin:focus-visible .jma-ring { opacity:.75; transform:scale(2.6); }
-  .jma-pin:hover .jma-lbl, .jma-pin:focus-visible .jma-lbl { opacity:1; }
-  @media (prefers-reduced-motion: reduce) {
-    .jma-pin, .jma-cbd-pulse, .jma-cover { animation:none; opacity:1; }
-  }
 </style>
 
 <!-- Schema: LocalBusiness / Construction -->
@@ -153,9 +134,9 @@
 
 <!-- ====================== HEADER ====================== -->
 <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-20">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 flex items-center justify-between h-24">
     <a href="#top" class="flex items-center group" aria-label="JMA Carpentry and Construction home">
-      <img src="images/logo.png" alt="JMA Carpentry & Construction" class="h-12 sm:h-16 w-auto" />
+      <img src="images/logo.png" alt="JMA Carpentry & Construction" class="h-16 sm:h-20 w-auto" />
     </a>
 
     <nav class="hidden lg:flex items-center gap-9 font-head text-sm uppercase tracking-widest text-warm/90">
@@ -196,7 +177,7 @@
   <div class="absolute inset-0 bg-charcoal/40"></div>
 
   <div class="relative max-w-7xl mx-auto px-5 sm:px-8 pb-20 pt-32 w-full">
-    <p class="font-head uppercase tracking-[0.35em] text-orange text-xs sm:text-sm mb-5 reveal">Perth Roofing &middot; Decking &middot; Outdoor Construction</p>
+    <p class="font-head font-bold uppercase tracking-[0.3em] text-orange text-sm sm:text-base mb-5 reveal">Perth Roofing &middot; Decking &middot; Outdoor Construction</p>
     <h1 class="font-display text-warm leading-[0.92] text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] reveal">
       Built To Last.<br>
       <span class="text-orange">Designed</span> To Be Used.
@@ -310,7 +291,7 @@
 
       <article class="project-card group bg-charcoal text-warm overflow-hidden reveal flex flex-col">
         <div class="relative aspect-[4/3] overflow-hidden">
-          <img src="https://picsum.photos/seed/outdoor/800/600?grayscale" alt="Outdoor construction Perth" loading="lazy" class="project-img w-full h-full object-cover object-center opacity-80" />
+          <img src="images/services/outdoor.jpg" alt="Outdoor construction Perth" loading="lazy" class="project-img w-full h-full object-cover object-center" />
           <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent"></div>
           <h3 class="absolute bottom-4 left-5 right-5 font-head uppercase tracking-wide text-2xl sm:text-3xl text-orange drop-shadow-lg">Outdoor Construction</h3>
         </div>
@@ -373,215 +354,64 @@
 <!-- ====================== SERVICE AREA ====================== -->
 <section id="areas" class="bg-warm py-24 sm:py-32">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <div class="max-w-3xl reveal">
+      <p class="font-head uppercase tracking-[0.3em] text-orange text-sm mb-4">Where We Work</p>
+      <h2 class="font-display text-charcoal text-5xl sm:text-6xl md:text-7xl leading-[0.95]">Covering Perth, coast to hills</h2>
+      <p class="mt-6 text-steel text-lg leading-relaxed">We work right across the Perth metro area, from the northern beaches down to the southern suburbs and out to the foothills. One local crew, on the road every day. Find your area below, and if you cannot see your suburb, just ask, chances are we cover it.</p>
+    </div>
 
-      <!-- Copy + suburb grid -->
-      <div class="reveal">
-        <p class="font-head uppercase tracking-[0.3em] text-orange text-sm mb-4">Where We Work</p>
-        <h2 class="font-display text-charcoal text-5xl sm:text-6xl md:text-7xl leading-[0.95]">Covering Perth, coast to hills</h2>
-        <p class="mt-6 text-steel text-lg leading-relaxed max-w-xl">We work right across the Perth metro area, from the northern beaches down to the southern suburbs and out to the foothills. One local crew, on the road every day, building decks, patios and roofs close to home.</p>
-
-        <div class="mt-8 flex flex-wrap gap-2.5">
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Scarborough</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Hillarys</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Joondalup</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Karrinyup</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Stirling</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Wembley</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Floreat</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Subiaco</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Mount Lawley</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Fremantle</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Cottesloe</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Duncraig</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Canning Vale</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Rockingham</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Midland</span>
-          <span class="inline-flex items-center bg-charcoal text-warm/90 font-head uppercase tracking-widest text-xs px-3.5 py-2">Kalamunda</span>
-          <span class="inline-flex items-center text-steel font-head uppercase tracking-widest text-xs px-2 py-2">+ everywhere between</span>
-        </div>
-
-        <p class="mt-9 text-charcoal font-head uppercase tracking-wide text-sm">Not sure if we reach your suburb?</p>
-        <a href="#quote" class="mt-3 inline-flex items-center bg-orange hover:bg-orange-bright text-charcoal font-head uppercase tracking-widest px-7 py-4 cut-corner transition-colors">Ask Us, It's Free</a>
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-charcoal/10 border border-charcoal/10 reveal">
+      <div class="bg-warm p-7">
+        <h3 class="font-head uppercase tracking-wide text-xl text-charcoal border-b-2 border-orange pb-3">Northern & Coastal</h3>
+        <ul class="mt-5 space-y-2.5 text-steel">
+            <li>Joondalup</li>
+            <li>Hillarys</li>
+            <li>Duncraig</li>
+            <li>Karrinyup</li>
+            <li>Scarborough</li>
+            <li>Stirling</li>
+            <li class="text-steel/55 italic">and surrounds</li>
+          </ul>
       </div>
 
-      <!-- Custom interactive Perth service-area map (SVG, no third party) -->
-      <div class="reveal">
-        <div class="jma-map relative cut-corner overflow-hidden border border-charcoal/10 shadow-xl">
-          <svg viewBox="0 0 640 560" role="img" aria-label="Map of JMA service suburbs across the Perth metropolitan area" preserveAspectRatio="xMidYMid meet">
-            <defs>
-              <linearGradient id="jmaOcean" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#16201f"/><stop offset="1" stop-color="#101817"/>
-              </linearGradient>
-              <radialGradient id="jmaCover" cx="45%" cy="55%" r="60%">
-                <stop offset="0" stop-color="#D86512" stop-opacity="0.22"/>
-                <stop offset="100%" stop-color="#D86512" stop-opacity="0"/>
-              </radialGradient>
-              <pattern id="jmaHatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="7" stroke="#2c2c2c" stroke-width="1"/>
-              </pattern>
-            </defs>
-
-            <!-- land base -->
-            <rect x="0" y="0" width="640" height="560" fill="#191919"/>
-            <!-- darling hills (east) -->
-            <path d="M640,0 L475,0 C448,120 442,250 468,375 C482,455 474,515 525,560 L640,560 Z" fill="#1e1e1e"/>
-            <path d="M640,0 L475,0 C448,120 442,250 468,375 C482,455 474,515 525,560 L640,560 Z" fill="url(#jmaHatch)" opacity="0.5"/>
-            <!-- ocean (west) -->
-            <path d="M0,0 L138,0 C126,110 128,250 150,355 C160,395 168,430 205,560 L0,560 Z" fill="url(#jmaOcean)"/>
-            <!-- coastline -->
-            <path d="M138,0 C126,110 128,250 150,355 C160,395 168,430 205,560" fill="none" stroke="#3a3a3a" stroke-width="1.5"/>
-            <!-- subtle waves -->
-            <path d="M40,150 q14,-7 28,0 t28,0" fill="none" stroke="#26332f" stroke-width="1.2" opacity="0.5"/>
-            <path d="M55,250 q14,-7 28,0 t28,0" fill="none" stroke="#26332f" stroke-width="1.2" opacity="0.5"/>
-            <path d="M45,420 q14,-7 28,0 t28,0" fill="none" stroke="#26332f" stroke-width="1.2" opacity="0.5"/>
-
-            <!-- coverage glow over the metro -->
-            <ellipse class="jma-cover" cx="280" cy="300" rx="190" ry="165" fill="url(#jmaCover)"/>
-
-            <!-- swan river -->
-            <path d="M165,372 C205,355 240,335 285,303 C330,300 380,292 420,280 C440,276 455,292 470,302"
-                  fill="none" stroke="#33403f" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
-            <ellipse cx="288" cy="303" rx="15" ry="7" fill="#33403f" opacity="0.85"/>
-
-            <!-- Perth CBD anchor -->
-            <g transform="translate(285,300)">
-              <circle class="jma-cbd-pulse" r="6" fill="#D86512"/>
-              <rect x="-5" y="-5" width="10" height="10" transform="rotate(45)" fill="#F07B22"/>
-              <text class="jma-cbd-lbl" x="12" y="4">Perth CBD</text>
-            </g>
-
-            <!-- suburb pins -->
-            <g id="jmaPins">
-      <a href="#quote" class="jma-pin" data-name="Joondalup" aria-label="Get a quote for Joondalup" style="animation-delay:0.25s">
-        <g transform="translate(200,58)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="11" y="4" text-anchor="start">Joondalup</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Hillarys" aria-label="Get a quote for Hillarys" style="animation-delay:0.29s">
-        <g transform="translate(158,108)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="-11" y="4" text-anchor="end">Hillarys</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Duncraig" aria-label="Get a quote for Duncraig" style="animation-delay:0.34s">
-        <g transform="translate(205,130)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="11" y="4" text-anchor="start">Duncraig</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Karrinyup" aria-label="Get a quote for Karrinyup" style="animation-delay:0.39s">
-        <g transform="translate(170,170)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="-11" y="4" text-anchor="end">Karrinyup</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Stirling" aria-label="Get a quote for Stirling" style="animation-delay:0.43s">
-        <g transform="translate(245,180)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="11" y="4" text-anchor="start">Stirling</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Scarborough" aria-label="Get a quote for Scarborough" style="animation-delay:0.47s">
-        <g transform="translate(150,210)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="-11" y="4" text-anchor="end">Scarborough</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Floreat" aria-label="Get a quote for Floreat" style="animation-delay:0.52s">
-        <g transform="translate(188,255)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="-11" y="4" text-anchor="end">Floreat</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Wembley" aria-label="Get a quote for Wembley" style="animation-delay:0.56s">
-        <g transform="translate(240,250)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="11" y="4" text-anchor="start">Wembley</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Subiaco" aria-label="Get a quote for Subiaco" style="animation-delay:0.61s">
-        <g transform="translate(255,285)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="11" y="4" text-anchor="start">Subiaco</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Mount Lawley" aria-label="Get a quote for Mount Lawley" style="animation-delay:0.66s">
-        <g transform="translate(300,255)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="11" y="4" text-anchor="start">Mount Lawley</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Cottesloe" aria-label="Get a quote for Cottesloe" style="animation-delay:0.70s">
-        <g transform="translate(148,305)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="-11" y="4" text-anchor="end">Cottesloe</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Fremantle" aria-label="Get a quote for Fremantle" style="animation-delay:0.74s">
-        <g transform="translate(165,370)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="-11" y="4" text-anchor="end">Fremantle</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Canning Vale" aria-label="Get a quote for Canning Vale" style="animation-delay:0.79s">
-        <g transform="translate(330,400)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="11" y="4" text-anchor="start">Canning Vale</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Rockingham" aria-label="Get a quote for Rockingham" style="animation-delay:0.83s">
-        <g transform="translate(210,505)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="11" y="4" text-anchor="start">Rockingham</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Midland" aria-label="Get a quote for Midland" style="animation-delay:0.88s">
-        <g transform="translate(415,235)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="-11" y="4" text-anchor="end">Midland</text>
-        </g>
-      </a>
-      <a href="#quote" class="jma-pin" data-name="Kalamunda" aria-label="Get a quote for Kalamunda" style="animation-delay:0.92s">
-        <g transform="translate(450,320)">
-          <circle class="jma-ring" r="4"></circle>
-          <circle class="jma-dot" r="4"></circle>
-          <text class="jma-lbl" x="-11" y="4" text-anchor="end">Kalamunda</text>
-        </g>
-      </a>
-            </g>
-          </svg>
-
-          <!-- readout overlay -->
-          <div class="absolute top-4 left-4 pointer-events-none select-none">
-            <div class="font-head uppercase tracking-[0.25em] text-orange text-[10px]">Service Area</div>
-            <div id="jmaReadout" class="font-display text-warm text-2xl sm:text-3xl leading-none mt-1">Greater Perth</div>
-            <div id="jmaHint" class="font-head uppercase tracking-widest text-warm/45 text-[10px] mt-1">Hover or tap a suburb</div>
-          </div>
-
-          <!-- compass + count -->
-          <div class="absolute top-4 right-5 font-head text-warm/35 text-xs tracking-widest pointer-events-none">N &uarr;</div>
-          <div class="absolute bottom-4 right-5 font-head uppercase tracking-widest text-warm/45 text-[10px] pointer-events-none">16 suburbs &middot; whole metro</div>
-        </div>
-        <p class="mt-3 font-head uppercase tracking-widest text-steel/70 text-xs text-center">Tap your suburb to start a free quote</p>
+      <div class="bg-warm p-7">
+        <h3 class="font-head uppercase tracking-wide text-xl text-charcoal border-b-2 border-orange pb-3">Central & Western</h3>
+        <ul class="mt-5 space-y-2.5 text-steel">
+            <li>Subiaco</li>
+            <li>Wembley</li>
+            <li>Floreat</li>
+            <li>Mount Lawley</li>
+            <li>Cottesloe</li>
+            <li class="text-steel/55 italic">and surrounds</li>
+          </ul>
       </div>
 
+      <div class="bg-warm p-7">
+        <h3 class="font-head uppercase tracking-wide text-xl text-charcoal border-b-2 border-orange pb-3">Southern & Coastal</h3>
+        <ul class="mt-5 space-y-2.5 text-steel">
+            <li>Fremantle</li>
+            <li>Canning Vale</li>
+            <li>Rockingham</li>
+            <li class="text-steel/55 italic">and surrounds</li>
+          </ul>
+      </div>
+
+      <div class="bg-warm p-7">
+        <h3 class="font-head uppercase tracking-wide text-xl text-charcoal border-b-2 border-orange pb-3">Eastern & Hills</h3>
+        <ul class="mt-5 space-y-2.5 text-steel">
+            <li>Midland</li>
+            <li>Kalamunda</li>
+            <li class="text-steel/55 italic">and surrounds</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-charcoal text-warm p-8 sm:p-10 cut-corner flex flex-col sm:flex-row sm:items-center justify-between gap-6 reveal">
+      <div>
+        <p class="font-display text-3xl sm:text-4xl leading-tight">Not sure if we reach you?</p>
+        <p class="mt-2 text-warm/70 max-w-md">Tell us your suburb and we will let you know straight away. It costs nothing to ask.</p>
+      </div>
+      <a href="#quote" class="shrink-0 inline-flex items-center bg-orange hover:bg-orange-bright text-charcoal font-head uppercase tracking-widest px-8 py-4 cut-corner transition-colors">Get A Free Quote</a>
     </div>
   </div>
 </section>
@@ -859,22 +689,6 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
-<script>
-  (function () {
-    var readout = document.getElementById('jmaReadout');
-    var hint = document.getElementById('jmaHint');
-    var def = 'Greater Perth', defHint = 'Hover or tap a suburb';
-    document.querySelectorAll('.jma-pin').forEach(function (p) {
-      var name = p.getAttribute('data-name');
-      var set = function () { if (readout) readout.textContent = name; if (hint) hint.textContent = 'We build here'; };
-      var clear = function () { if (readout) readout.textContent = def; if (hint) hint.textContent = defHint; };
-      p.addEventListener('mouseenter', set);
-      p.addEventListener('focus', set);
-      p.addEventListener('mouseleave', clear);
-      p.addEventListener('blur', clear);
-    });
-  })();
 </script>
 </body>
 </html>
